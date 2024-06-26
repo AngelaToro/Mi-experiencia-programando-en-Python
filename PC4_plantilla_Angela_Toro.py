@@ -135,7 +135,7 @@ grafico_seleccionado = sidebar.selectbox('Selecciona un gráfico', graficos)
 # Mostramos el gráfico seleccionado
 if grafico_seleccionado == 'Mapa de películas':
     sidebar.markdown("<div style='text-align: justify; font-size: 20px;'>Este primer gráfico, es un mapa en el que se observan los lugares donde se grabaron mis 5 películas favoritas</div>", unsafe_allow_html=True)
-    sidebar.image("mapa_pelis.png", caption='Mapa de películas', width=500)
+    sidebar.image("mapa_pelis.jpg", caption='Mapa de películas', width=500)
     pass
 elif grafico_seleccionado == 'Gráfico de Tarjetas Amarillas':
     sidebar.markdown("<div style='text-align: justify'>Este gráfico muestra el promedio de tarjetas amarillas recibidas como equipo local de los equipos de la Liga Francesa durante la temporada 2022-2023.</div>", unsafe_allow_html=True)
@@ -155,7 +155,7 @@ elif grafico_seleccionado == 'Gráfico de Familias':
     pass
 elif grafico_seleccionado == 'Mapa de Familias Lingüísticas':
     sidebar.markdown("<div style='text-align: justify'>Por último, este gráfico es un mapa de Sudamérica que ubica los puntos geográficos del Quechuan, una familia linguística sudamericana.</div>", unsafe_allow_html=True)
-    sidebar.image("mapa_familia_linguistica.png", caption='Mapa de Familias Lingüísticas', width=500)
+    sidebar.image("mapa_familia_linguistica.jpg", caption='Mapa de Familias Lingüísticas', width=500)
     pass
 
 # if grafico_seleccionado == 'Gráfico de Macroareas':: Esta línea verifica si la opción seleccionada es 'Gráfico de Macroareas'.
