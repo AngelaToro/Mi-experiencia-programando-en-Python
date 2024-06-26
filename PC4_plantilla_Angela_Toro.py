@@ -120,7 +120,7 @@ sidebar.markdown("<h1 style='text-align: center;'>Gráficos que elaboramos en cl
 # El texto dentro de las etiquetas <h1> ("Los análisis de Ellie") es el contenido del encabezado.
 
 # Creamos una lista de gráficos
-graficos = ['Mapa de Peliculas', 'Gráfico de Tarjetas Amarillas', 'Gráfico de Tarjetas Rojas', 'Histograma de Strasbourg', 'Gráfico de Familias', 'Mapa de Familias lingüísticas']
+graficos = ['Mapa de películas', 'Gráfico de Tarjetas Amarillas', 'Gráfico de Tarjetas Rojas', 'Histograma de Strasbourg', 'Gráfico de Familias', 'Mapa de Familias lingüísticas']
 
 # Creamos un cuadro de selección en la barra lateral
 grafico_seleccionado = sidebar.selectbox('Selecciona un gráfico', graficos)
@@ -153,9 +153,9 @@ elif grafico_seleccionado == 'Gráfico de Familias':
     sidebar.markdown("<div style='text-align: justify'>Este gráfico se hizo a partir de una base de datos sobre lenguas sudamericanas y muestra la cantidad de lenguas por familias linguística dentro.</div>", unsafe_allow_html=True)
     sidebar.image("barras_horizontales_familia.png", caption='Gráfico de Familias', width=500)
     pass
-elif grafico_seleccionado == 'Mapa de Familias Linguísticas':
+elif grafico_seleccionado == 'Mapa de Familias Lingüísticas':
     sidebar.markdown("<div style='text-align: justify'>Por último, este gráfico es un mapa de Sudamérica que ubica los puntos geográficos del Quechuan, una familia linguística sudamericana.</div>", unsafe_allow_html=True)
-    sidebar.image("mapa_familia_linguistica.png", caption='Mapa de Familias Linguísticas', width=500)
+    sidebar.image("mapa_familia_linguistica.png", caption='Mapa de Familias Lingüísticas', width=500)
     pass
 
 # if grafico_seleccionado == 'Gráfico de Macroareas':: Esta línea verifica si la opción seleccionada es 'Gráfico de Macroareas'.
