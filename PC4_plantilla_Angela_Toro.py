@@ -46,7 +46,7 @@ col1, col2 = st.columns(2)
 # Las columnas creadas se asignan a las variables col1 y col2.
 
 # En la primera columna colocamos la imagen
-col1.image("fotoange.jpeg", caption='Esta soy yo', width=300)
+col1.image("fotoange.jpeg", caption='Esta soy yo ☘️', width=300, unsafe_allow_html=True)
 
 # col1.image("ellie.png", caption='Ellie', width=300): Esta línea está colocando una imagen en la primera columna (col1). 
 # La función image toma como primer argumento la ruta de la imagen que se va a mostrar. 
@@ -59,7 +59,7 @@ col1.image("fotoange.jpeg", caption='Esta soy yo', width=300)
 # ¿Qué te gustaría hacer en el futuro?, ¿Qué te gusta hacer en tu tiempo libre?
 
 texto = """
-Hola! Me llamo Ángela, tengo 21 años y estudio la carrera de Comunicación para el Desarrollo en la PUCP. Este es mi segundo año de facultad y en general me gusta mucho lo que voy aprendiendo.  
+Hola! Me llamo Ángela, tengo 21 años y estudio Comunicación para el Desarrollo en la PUCP :D. Si le preguntaran a mi yo de hace hace algunos años que estaba a punto de terminar el colegio qué se veía haciendo a los 21 años, probablemente mi respuesta hubiera sido que algo muy diferente a las comunicaciones. Pero...¿quién tiene su futuro resuelto a los 16 años? En mi paso por la universidad, me di cuenta que poco a poco eso que creía saber sobre el rumbo de mi vida iba cambiando, cambiando para bien. Y aunque en su momento, todas estas dudas vocacionales fueron todo un reto y la idea de cambiarme de carrera me parecía tan emocionante como aterradora, hoy me alegra mucho haberme atrevido a escuchar mi intuición. Este es mi segundo año de facultad, y me gusta mucho lo que voy aprendiendo. En comunica vemos de todo un poco, aprendemos a manejar las cámaras, a analizar películas, a crear campañas, a observar con atención nuestra realidad y a comprender otras miradas. A inicios de este año, me dieron la noticia de que habían actualizado los planes de estudios en nuestra facultad. Yo estaba muy emocionada por saber cuáles serían estos cambios, pero a la vez, algo angustiada por cómo estos pudieran afectar mi paso por la universidad. Cuando finalmente pude ver de qué se trataba, me di cuenta que este 2024-1 tendría que llevar un nuevo curso llamado Pensamiento Computacional. Sin la menor idea de a qué me estaba metiendo salvo la certeza de que este sería un ciclo más visitando las salas de computo del z, me inscribí al curso, y así comenzó mi experiencia :)
 """
 
 # Las comillas triples (""") en Python se utilizan para definir cadenas multilínea.
@@ -96,7 +96,7 @@ st.markdown("<h2 style='text-align: center;'>Mi experiencia aprendiendo a progra
 
 # Agregar un  texto para la respuesta
 texto_2 = """
-Aquí escribe tu experiencia aprendiendo a programar. 
+Mi experiencia aprendiendo a programar en Python ha sido una montaña rusa. Antes de iniciar el curso tenía muchas dudas sobre los contenidos, sobre la complejidad de los temas...estaba segura de la programación no era lo mío pero también estaba decidida a no dejarme intimidar por esas largas cadenas de texto antes de comenzar. Un martes, comenzamos con un print('Hola Mundo') y de repente todas esas dudas se hicieron más pequeñas. Me gustó mucho aprender sobre las funciones, los bucles y el manejo de datos, habían temas que me resultaban más sencillos y divertidos, y habían otros que me dejaban pensando por horas. Pero lo que más me gustó fue la manera en que íbamos construyendo los algoritmos, ordenando cada tarea paso a paso para que pueda cumplir su función. Creo que ejercitar este tipo de pensamiento es muy mportante para nosotros como comunicadores, porque observamos cada parte del proceso, desglozando un objetivo grande en pequeñas partes que finalmente contribuyen a lograr el producto final. 
 """
 
 # Mostramos el texto
@@ -112,7 +112,7 @@ st.markdown(f"<div style='text-align: justify; font-size: 15px;'>{texto_2}</div>
 # En este caso, {texto_2} se reemplaza por el valor de la variable texto_2.
 
 # Agregamos un subtítulo en la barra lateral
-sidebar.markdown("<h1 style='text-align: center;'>Estos son algunos de los gráficos que elaboramos en clase</h1>", unsafe_allow_html=True)
+sidebar.markdown("<h1 style='text-align: center;'>Gráficos que elaboramos en clase</h1>", unsafe_allow_html=True)
 
 # <h1 style='text-align: center;'>Los análisis de Ellie</h1>: Esta es una cadena de código HTML.
 # La etiqueta <h1> se utiliza para el encabezado principal de una página web.
@@ -120,7 +120,7 @@ sidebar.markdown("<h1 style='text-align: center;'>Estos son algunos de los gráf
 # El texto dentro de las etiquetas <h1> ("Los análisis de Ellie") es el contenido del encabezado.
 
 # Creamos una lista de gráficos
-graficos = ['Gráfico de Tarjetas Amarillas', 'Gráfico de Tarjetas Rojas', 'Histograma de Strasbourg', 'Gráfico de Familias', 'Mapa de Familias lingüísticas', 'Mapa de Peliculas']
+graficos = ['Mapa de Peliculas', 'Gráfico de Tarjetas Amarillas', 'Gráfico de Tarjetas Rojas', 'Histograma de Strasbourg', 'Gráfico de Familias', 'Mapa de Familias lingüísticas']
 
 # Creamos un cuadro de selección en la barra lateral
 grafico_seleccionado = sidebar.selectbox('Selecciona un gráfico', graficos)
@@ -133,29 +133,29 @@ grafico_seleccionado = sidebar.selectbox('Selecciona un gráfico', graficos)
 # La función selectbox se utiliza para crear un cuadro de selección en la barra lateral.
 
 # Mostramos el gráfico seleccionado
-if grafico_seleccionado == 'Gráfico de Tarjetas Amarillas':
-    sidebar.markdown("<div style='text-align: justify; font-size: 20px;'>Aquí debe ir una breve interpretación de tu gráfico</div>", unsafe_allow_html=True)
+if grafico_seleccionado == 'Mapa de películas':
+    sidebar.markdown("<div style='text-align: justify; font-size: 20px;'>Este primer gráfico, es un mapa en el que se observan los lugares donde se grabaron mis 5 películas favoritas</div>", unsafe_allow_html=True)
+    sidebar.image("mapa_pelis.png", caption='Mapa de películas', width=500)
+    pass
+elif grafico_seleccionado == 'Gráfico de Tarjetas Amarillas':
+    sidebar.markdown("<div style='text-align: justify'>Este gráfico muestra el promedio de tarjetas amarillas recibidas como equipo local de los equipos de la Liga Francesa durante la temporada 2022-2023.</div>", unsafe_allow_html=True)
     sidebar.image("barras_tarjeta_amarilla.png", caption='Gráfico de Tarjetas Amarillas', width=500)
     pass
 elif grafico_seleccionado == 'Gráfico de Tarjetas Rojas':
-    sidebar.markdown("<div style='text-align: justify'>Texto para la opción 2.</div>", unsafe_allow_html=True)
+    sidebar.markdown("<div style='text-align: justify'>Este gráfico muestra el promedio de tarjetas rojas recibidas como equipo visitante de los equipos de la Liga Francesa durante la temporada 2022-2023.</div>", unsafe_allow_html=True)
     sidebar.image("barras_tarjeta_rojas.png", caption='Gráfico de Tarjetas Rojas', width=500)
     pass
 elif grafico_seleccionado == 'Histograma de Strasbourg':
-    sidebar.markdown("<div style='text-align: justify'>Texto para la opción 3.</div>", unsafe_allow_html=True)
+    sidebar.markdown("<div style='text-align: justify'>Este gráfico muestra los goles anotados por el equipo Strasbourg como equipo local y como equipo visitante durante la temporada 2022-2023.</div>", unsafe_allow_html=True)
     sidebar.image("histograma_strasbourg.png", caption='Histograma de Strasbourg', width=500)
     pass
 elif grafico_seleccionado == 'Gráfico de Familias':
-    sidebar.markdown("<div style='text-align: justify'>Texto para la opción 4.</div>", unsafe_allow_html=True)
+    sidebar.markdown("<div style='text-align: justify'>Este gráfico se hizo a partir de una base de datos sobre lenguas sudamericanas y muestra la cantidad de lenguas por familias linguística dentro.</div>", unsafe_allow_html=True)
     sidebar.image("barras_horizontales_familia.png", caption='Gráfico de Familias', width=500)
     pass
 elif grafico_seleccionado == 'Mapa de Familias Linguísticas':
-    sidebar.markdown("<div style='text-align: justify'>Texto para la opción 5.</div>", unsafe_allow_html=True)
+    sidebar.markdown("<div style='text-align: justify'>Por último, este gráfico es un mapa de Sudamérica que ubica los puntos geográficos del Quechuan, una familia linguística sudamericana.</div>", unsafe_allow_html=True)
     sidebar.image("mapa_familia_linguistica.png", caption='Mapa de Familias Linguísticas', width=500)
-    pass
-elif grafico_seleccionado == 'Mapa de Películas':
-    sidebar.markdown("<div style='text-align: justify'>Texto para la opción 6.</div>", unsafe_allow_html=True)
-    sidebar.image("mapa_pelis.png", caption='Mapa de Películas', width=500)
     pass
 
 # if grafico_seleccionado == 'Gráfico de Macroareas':: Esta línea verifica si la opción seleccionada es 'Gráfico de Macroareas'.
